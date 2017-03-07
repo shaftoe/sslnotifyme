@@ -1,0 +1,19 @@
+aws_account_id = ""
+
+aws_cloudfront_enabled = false
+
+aws_cloudfront_id = ""
+
+aws_region = "us-east-1"
+
+dkim1_token = ""
+
+dkim2_token = ""
+
+dkim3_token = ""
+
+domain_name = ""
+
+ses_bounce_email = ""
+
+verification_token = ""

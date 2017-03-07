@@ -1,0 +1,6 @@
+*pyc
+*zip
+build/
+terraform.tfstate*
+terraform.tfvars*
+.cache

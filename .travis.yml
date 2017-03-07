@@ -1,0 +1,4 @@
+language: python
+install:
+  - pip install -U pytest moto boto3
+script: py.test

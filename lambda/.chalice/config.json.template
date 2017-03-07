@@ -1,0 +1,7 @@
+{
+  "manage_iam_role": false, 
+  "iam_role_arn": "arn:aws:iam::XXXXXXXX:role/lambda_sslnotifyme_api",
+  "lambda_arn": "arn:aws:lambda:us-east-1:XXXXXXXX:function:sslnotifyme_api",
+  "app_name": "sslnotifyme_api",
+  "stage": "dev"
+}

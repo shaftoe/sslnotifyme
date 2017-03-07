@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="ssl, https, check, monitor, expiry, ssl expiry, ssl checker, certificate expiry monitor, sl certificate expiration, ssl verify, ssl monitor, ssl expiration check, ssl alert, ssl check">
+    <meta name="description" content="Enable monitoring for your SSL certificate expiration">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <title>How to use SSL Notify Me</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--Google analytics-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-93920736-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="common.js"></script>
+</head>
+<body>
+    <div style="padding-left: 20%; padding-right: 20%">
+        <h2 class="text-center">Why SSL Notify Me?</h2>
+        <p>With new automated services like the ones offered by <a href="https://letsencrypt.org/" title="Let's encrypt">Let's Encrypt</a> or <a href="https://aws.amazon.com/certificate-manager/" title="AWS ACM">AWS Certificate Manager</a>, the pain of manually managing certificates (including deployment and renewal) is greatly diminished. Nevertheless, there are many webmasters out there who still have to deal with certificates authorities and expiring SSL certificates. SSL Notify Me is meant for those admins, and in general for anyone who doesn't want to risk forgetting to renew a certificate.</p>
+
+        <h2>How it works</h2>
+        <ol>
+        <li>You create a monitoring check clicking on the <b>Remind Me</b> button in the <a href="index.html" title="Homepage">home page</a></li>
+        <li>You confirm your address is valid clicking on the link you received via email</li>
+        <li><b>Every morning at 6:00 UTC</b>, the system will run a check for you against <a title="sslexpired.info page" href="https://github.com/shaftoe/sslexpired">sslexpired.info APIs</a>, and if the check fails, an alert will be sent to your email address with a summary of the problem</li>
+        <li>Once the check has been activated, it will run every day, meaning that if you don't issue a new certificate or fix the problem affecting the https server hosting the SSL certificate, you will keep receiving the same alert every morning, hence the alert comes with an unsubscribe link which you can follow to remove the check if it's too noisy. Don't worry if you remove the check by mistake, you can register any time you want following this procedure
+        </ol>
+
+        <h2>Limitations</h2>
+        <ul>
+        <li>At the moment, it's possible to have <b>only one domain checked per email account</b>, so if you will register a new check with the same address, it will overwrite any existing one</li>
+        <li>Non-ascii domains (i.e. with non-English chars like <b>факитол.рф</b>) are not currently supported</li>
+        </ul>
+    </div>
+
+    <div class="navbar navbar-fixed-bottom text-center">
+        <div class="container">
+            <a href="index.html" title="Homepage" style="margin-right: 2%">SSL Notify Me</a>
+            <a href="//www.iubenda.com/privacy-policy/8074244" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+            <a href="feedback.html" title="Send us feedback" style="margin-left: 2%">Feedback</a>
+        </div>
+    </div>
+
+</body>
+</html>
