@@ -218,7 +218,7 @@ resource "aws_ses_receipt_rule" "main" {
 
   s3_action {
     bucket_name = "${aws_s3_bucket.ses-delivery-to-s3.id}"
-    position    = 0
+    position    = 1
   }
 }
 
@@ -231,7 +231,7 @@ resource "aws_ses_receipt_rule" "feedback" {
 
   s3_action {
     bucket_name = "${aws_s3_bucket.ses-delivery-to-s3.id}"
-    position    = 0
+    position    = 1
   }
 }
 
