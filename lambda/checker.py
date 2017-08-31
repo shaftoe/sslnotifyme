@@ -1,6 +1,6 @@
 '''sslnotify.me lambda checker.'''
 import json
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 
 from sslnotifyme import (lambda_mailer, LOGGER, lambda_main_wrapper)
 
@@ -16,14 +16,14 @@ class Checker(object):
         url = '%s/%s%s' % (SSLEXPIRED_API_URL, domain,
                            ('?days=%s' % days) if days else '')
         LOGGER.info('invoking %s', url)
-        return json.load(urllib2.urlopen(url))
+        return json.load(urllib.request.urlopen(url))
 
     @staticmethod
     def check_and_send_alert(record):
         '''Send alert email if sslexpired check has alerts.'''
         if not ('domain' in record and 'days' in record):
             err = 'error: wrong record format: %s' % record
-            print err
+            print(err)
             return err
 
         try:

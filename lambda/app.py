@@ -61,7 +61,7 @@ def add_user(user):
                 days = int(params['days'])
                 if days < 1:
                     raise ValueError
-            except ValueError, err:
+            except ValueError as err:
                 raise BadRequestError('days value must be a positive number')
 
         else:
@@ -76,7 +76,7 @@ def add_user(user):
                                             user, params['domain'], days, uuid)
             return process_lambda_output(output)
 
-        except ClientError, err:
+        except ClientError as err:
             raise BadRequestError('%s' % err)
 
     raise BadRequestError('must provide either domain or uuid parameter')

@@ -4,3 +4,4 @@ build/
 terraform.tfstate*
 terraform.tfvars*
 .cache
+venv/

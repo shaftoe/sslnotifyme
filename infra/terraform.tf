@@ -400,7 +400,7 @@ resource "aws_lambda_function" "lambda-cron" {
   role             = "${aws_iam_role.lambda-cron-role.arn}"
   handler          = "cron.lambda_main"
   source_code_hash = "${base64sha256(file("${path.module}/build/cron.zip"))}"
-  runtime          = "python2.7"
+  runtime          = "python3.6"
   timeout          = "${var.lambda_timeout_in_seconds}"
 }
 
@@ -483,7 +483,7 @@ resource "aws_lambda_function" "lambda-db" {
   role             = "${aws_iam_role.lambda-db-role.arn}"
   handler          = "data.lambda_main"
   source_code_hash = "${base64sha256(file("${path.module}/build/data.zip"))}"
-  runtime          = "python2.7"
+  runtime          = "python3.6"
   timeout          = "${var.lambda_timeout_in_seconds}"
 }
 
@@ -553,7 +553,7 @@ resource "aws_lambda_function" "lambda-mailer" {
   role             = "${aws_iam_role.lambda-mailer-role.arn}"
   handler          = "mailer.lambda_main"
   source_code_hash = "${base64sha256(file("${path.module}/build/mailer.zip"))}"
-  runtime          = "python2.7"
+  runtime          = "python3.6"
   timeout          = "${var.lambda_timeout_in_seconds}"
 
   environment {
@@ -609,7 +609,7 @@ resource "aws_lambda_function" "lambda-checker" {
   role             = "${aws_iam_role.lambda-checker-role.arn}"
   handler          = "checker.lambda_main"
   source_code_hash = "${base64sha256(file("${path.module}/build/checker.zip"))}"
-  runtime          = "python2.7"
+  runtime          = "python3.6"
   timeout          = "${var.lambda_timeout_in_seconds}"
 }
 
@@ -685,7 +685,7 @@ resource "aws_lambda_function" "lambda-reporter" {
   role             = "${aws_iam_role.lambda-reporter-role.arn}"
   handler          = "reporter.lambda_main"
   source_code_hash = "${base64sha256(file("${path.module}/build/reporter.zip"))}"
-  runtime          = "python2.7"
+  runtime          = "python3.6"
   timeout          = "${var.lambda_timeout_in_seconds}"
 }
 

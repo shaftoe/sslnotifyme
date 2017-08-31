@@ -79,13 +79,13 @@ def lambda_main(event, context):
 
 def print_usage():
     '''Print usage to STDOUT.'''
-    print 'usage: %s print' % argv[0]
+    print('usage: %s print' % argv[0])
 
 
 if __name__ == '__main__':
     if len(argv) == 1:
         print_usage()
     elif argv[1] == 'print':
-        print Reporter.get_report(exclude_regexp=r'^(START |END |REPORT )')
+        print(Reporter.get_report(exclude_regexp=r'^(START |END |REPORT )'))
     else:
         print_usage()
