@@ -1,3 +1,7 @@
+# --- DISCONTINUED ---
+
+**This project has been discontinued (i.e. frontend and webservice backend are not online anymore), feel free to fork and/or register the same domains (sslnotify.me / sslexpired.info) if you're interested in maintaining it. Have fun!**
+
 # sslnotify.me
 
 [![Build Status](https://travis-ci.org/shaftoe/sslnotifyme.svg?branch=master)](https://travis-ci.org/shaftoe/sslnotifyme)
